@@ -9,5 +9,5 @@ class ProductModelForm(forms.ModelForm):
             "price",
             "description",
             "seller",
-            "avalability"
+            "availability"
         ]

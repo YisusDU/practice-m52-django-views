@@ -1,0 +1,15 @@
+<h1>Actualizacion de producto {{ form.instance.title }}</h1>
+
+<p>Producto: {{ form.instance.title }}</p>
+<p>Precio: {{ form.instance.price }}</p>
+<p>Vendedor: {{ form.instance.seller }}</p>
+<p>Descripción: {{ form.instance.description }}</p>
+<p>Disponibilidad: {{ form.instance.avalability }}</p>
+
+<form method="POST" action="">
+  {% csrf_token %}
+  <!-- token de seguridad -->
+  {{ form.as_p }}
+  <!-- as_p es para separar y que no venga todo en una línea -->
+  <input type="submit" value="Actualizar" />
+</form>
